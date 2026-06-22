@@ -1,3 +1,5 @@
+let count = 0;
+
 const noButton = document.getElementById("no");
 
 const warnings = [
@@ -15,6 +17,11 @@ const warnings = [
 
 noButton.addEventListener("mouseover", () => {
 
+    count++;
+
+document.getElementById("attempts").innerText =
+"Escape Attempts: " + count;
+
     let x = Math.random() * (window.innerWidth - 150);
 
     let y = Math.random() * (window.innerHeight - 80);
@@ -28,6 +35,20 @@ noButton.addEventListener("mouseover", () => {
 
     document.getElementById("warning").innerText =
     randomMessage;
+    if(count == 10){
+    document.getElementById("warning").innerText =
+    "Bro, just press Continue Friendship 😂";
+}
+
+if(count == 20){
+    document.getElementById("warning").innerText =
+    "Keerthana, the Friendship Department is concerned 😭";
+}
+
+if(count == 50){
+    document.getElementById("warning").innerText =
+    "Achievement Unlocked: Professional Button Chaser 🏆";
+}
 
 });
 
