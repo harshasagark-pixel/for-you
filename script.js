@@ -13,4 +13,5 @@ function nextSlide() {
     }
 
     slides[currentSlide].classList.add("active");
+
 }
