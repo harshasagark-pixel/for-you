@@ -1,71 +1,68 @@
-function showMessage(choice){
+const noButton = document.getElementById("no");
 
-document.getElementById("buttons").style.display = "none";
+const warnings = [
+"Nice try 😏",
+"Friendship Protection Activated",
+"Error 404: Friendship Not Found",
+"Not so fast 😂",
+"Consulting friendship department...",
+"Think twice 😌",
+"This option is temporarily unavailable"
+];
 
-let text = "";
+noButton.addEventListener("mouseover", () => {
 
-if(choice==1){
+    let x = Math.random() * (window.innerWidth - 200);
 
-text = `
-I know I made mistakes, and I understand that my actions hurt you.
+    let y = Math.random() * (window.innerHeight - 100);
 
-I am not trying to justify myself or ask for immediate forgiveness.
+    noButton.style.left = x + "px";
 
-I only wanted to acknowledge where I was wrong and sincerely apologize.
+    noButton.style.top = y + "px";
 
-I respect your feelings and understand if you need time.
-`;
+    let randomMessage =
+    warnings[Math.floor(Math.random() * warnings.length)];
 
-}
+    document.getElementById("warning").innerText =
+    randomMessage;
 
-if(choice==2){
+});
 
-text = `
-This experience taught me many things.
+function continueFriendship(){
 
-It made me understand the importance of trust, words, and actions.
+    document.body.innerHTML = `
 
-I realized that friendships should never be taken for granted.
+    <div style="text-align:center;
+    margin-top:150px;
+    color:white;
+    font-family:Arial;">
 
-I have learned from my mistakes and hope to become a better person because of them.
-`;
+    <h1>Congratulations 🎉</h1>
 
-}
+    <h2>Friendship Successfully Renewed</h2>
 
-if(choice==3){
+    <br>
 
-text = `
-Despite everything that happened, I want to thank you wholeheartedly.
+    <p>
+    Benefits include:
+    </p>
 
-Thank you for the conversations, the memories, the laughter, and the moments that made our friendship special.
+    <p>✓ Unlimited bad jokes</p>
 
-I remain grateful for having known you and for the friendship we shared.
+    <p>✓ Free technical support</p>
 
-Some memories are valuable not because they last forever, but because they once brought happiness.
+    <p>✓ Occasional apologies</p>
 
-And for that, I will always be thankful.
-`;
+    <p>✓ A friend who still values this friendship</p>
 
-}
+    <br>
 
-if(choice==4){
+    <p>
+    In all seriousness, take all the time you need.
+    I know I made mistakes, but I hope one day we'll laugh about this website.
+    </p>
 
-text = `
-I don't want this to be a goodbye.
+    </div>
 
-I understand that I made mistakes and that some wounds need time to heal.
-
-I am not expecting things to become normal immediately.
-
-All I hope is that, whenever you feel ready, there might still be a place for our friendship again.
-
-Until then, I will respect your space and wish you nothing but peace, happiness, and success.
-
-Take care, Keerthana.
-`;
-
-}
-
-document.getElementById("message").innerText = text;
-
+    `;
 }
