@@ -8,20 +8,33 @@
 </head>
 <body>
 
-<div class="slide">
-    <h1>Hi Keerthana</h1>
+<div class="container">
 
-    <p>
-        Thank you for taking a moment to visit this website.
-    </p>
+    <div class="slide active">
+        <h1>Hi Keerthana</h1>
+        <p>
+            Thank you for taking a moment to visit this website.
+        </p>
+        <button onclick="nextSlide()">Next</button>
+    </div>
 
-    <p>
-        I created this because some things are easier to express thoughtfully than through messages.
-    </p>
+    <div class="slide">
+        <h1>A Small Request</h1>
+        <p>
+            Please read these pages with patience.
+            I only wanted to express a few things respectfully.
+        </p>
+        <button onclick="nextSlide()">Next</button>
+    </div>
 
-    <button onclick="nextSlide()">
-        Next
-    </button>
+    <div class="slide">
+        <h1>Thank You</h1>
+        <p>
+            Whatever happens, I appreciate the time and memories we shared as friends.
+        </p>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
