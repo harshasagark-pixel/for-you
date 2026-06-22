@@ -2,19 +2,22 @@ const noButton = document.getElementById("no");
 
 const warnings = [
 "Nice try 😏",
-"Friendship Protection Activated",
-"Error 404: Friendship Not Found",
-"Not so fast 😂",
-"Consulting friendship department...",
-"Think twice 😌",
-"This option is temporarily unavailable"
+"Friendship Protection Activated 🚨",
+"Deleting friendship is a premium feature.",
+"Request denied by Friendship Department.",
+"Error 404: Friendship Lost.",
+"Consulting common sense...",
+"Please reconsider your life choices 😂",
+"This option is currently under maintenance.",
+"Loading emotional damage...",
+"System recommends keeping this idiot as a friend."
 ];
 
 noButton.addEventListener("mouseover", () => {
 
-    let x = Math.random() * (window.innerWidth - 200);
+    let x = Math.random() * (window.innerWidth - 150);
 
-    let y = Math.random() * (window.innerHeight - 100);
+    let y = Math.random() * (window.innerHeight - 80);
 
     noButton.style.left = x + "px";
 
