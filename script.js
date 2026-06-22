@@ -42,7 +42,7 @@ function continueFriendship(){
 
     <h1>Congratulations 🎉</h1>
 
-    <h2>Friendship Successfully Renewed</h2>
+    <h2>Friendship Contract Extended Successfully 🤝</h2>
 
     <br>
 
